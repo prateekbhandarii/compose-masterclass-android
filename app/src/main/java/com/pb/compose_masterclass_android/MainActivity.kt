@@ -8,8 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.pb.compose_masterclass_android.sideEffects.AutoScrollScreenRoot
 import com.pb.compose_masterclass_android.ui.theme.ComposemasterclassandroidTheme
-import com.pb.compose_masterclass_android.todoApp.TodoListScreenRoot
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,8 +18,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposemasterclassandroidTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    TodoListScreenRoot(
-                        modifier = Modifier.padding(innerPadding)
+                    AutoScrollScreenRoot(
+                        modifier = Modifier
+                            .padding(innerPadding)
                     )
                 }
             }
