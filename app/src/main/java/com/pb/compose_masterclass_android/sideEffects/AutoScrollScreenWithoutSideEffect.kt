@@ -17,6 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.pb.compose_masterclass_android.compositionLocal.LocalSnackBarHostState
 import com.pb.compose_masterclass_android.ui.theme.ComposemasterclassandroidTheme
 
 @Composable
@@ -42,7 +43,7 @@ fun AutoScrollScreen(
     Scaffold (
         snackbarHost = {
             SnackbarHost(
-                hostState = snackBarHostState
+                hostState = LocalSnackBarHostState.current
             )
         }
     ){ innerPadding ->
